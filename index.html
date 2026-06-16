@@ -60,56 +60,63 @@ html,body{
 
 <ul>
 
-<li><a data-weight="45">Aprender</a></li>
-<li><a data-weight="45">Innovación</a></li>
-<li><a data-weight="42">Creatividad</a></li>
-<li><a data-weight="40">Conocimiento</a></li>
-<li><a data-weight="38">Educación</a></li>
+<li><a data-weight="50">Aprender</a></li>
+<li><a data-weight="48">Innovación</a></li>
+<li><a data-weight="46">Creatividad</a></li>
+<li><a data-weight="44">Conocimiento</a></li>
+<li><a data-weight="42">Educación</a></li>
 
-<li><a data-weight="34">Motivación</a></li>
-<li><a data-weight="34">Diversidad</a></li>
-<li><a data-weight="34">Inclusión</a></li>
-<li><a data-weight="34">Cooperación</a></li>
+<li><a data-weight="38">Motivación</a></li>
+<li><a data-weight="38">Inclusión</a></li>
+<li><a data-weight="38">Diversidad</a></li>
+<li><a data-weight="38">Cooperación</a></li>
 
-<li><a data-weight="30">Autonomía</a></li>
-<li><a data-weight="30">Calidad</a></li>
-<li><a data-weight="30">Convivencia</a></li>
-<li><a data-weight="30">Arte</a></li>
+<li><a data-weight="34">Autonomía</a></li>
+<li><a data-weight="34">Calidad</a></li>
+<li><a data-weight="34">Arte</a></li>
+<li><a data-weight="34">Convivencia</a></li>
 
-<li><a data-weight="26">Pensamiento crítico</a></li>
-<li><a data-weight="26">Aprendizaje activo</a></li>
-<li><a data-weight="26">Trabajo en equipo</a></li>
-<li><a data-weight="26">Competencias</a></li>
+<li><a data-weight="30">Pensamiento crítico</a></li>
+<li><a data-weight="30">Aprendizaje activo</a></li>
+<li><a data-weight="30">Trabajo en equipo</a></li>
+<li><a data-weight="30">Competencias</a></li>
 
-<li><a data-weight="22">Juego</a></li>
-<li><a data-weight="22">Lectura</a></li>
-<li><a data-weight="22">Proyectos</a></li>
-<li><a data-weight="22">Curiosidad</a></li>
+<li><a data-weight="26">Juego</a></li>
+<li><a data-weight="26">Lectura</a></li>
+<li><a data-weight="26">Proyectos</a></li>
+<li><a data-weight="26">Curiosidad</a></li>
 
-<li><a data-weight="20">Investigación</a></li>
-<li><a data-weight="20">Esfuerzo</a></li>
-<li><a data-weight="20">Felicidad</a></li>
-<li><a data-weight="20">Igualdad</a></li>
+<li><a data-weight="22">Investigación</a></li>
+<li><a data-weight="22">Esfuerzo</a></li>
+<li><a data-weight="22">Felicidad</a></li>
+<li><a data-weight="22">Igualdad</a></li>
 
-<li><a data-weight="18">Metodologías activas</a></li>
-<li><a data-weight="18">Respeto</a></li>
-<li><a data-weight="18">Empatía</a></li>
-<li><a data-weight="18">Participación</a></li>
+<li><a data-weight="20">Metodologías activas</a></li>
+<li><a data-weight="20">Respeto</a></li>
+<li><a data-weight="20">Empatía</a></li>
+<li><a data-weight="20">Participación</a></li>
 
-<li><a data-weight="16">Sostenibilidad</a></li>
-<li><a data-weight="16">Comunicación</a></li>
-<li><a data-weight="16">Ciudadanía</a></li>
-<li><a data-weight="16">Tecnología</a></li>
+<li><a data-weight="18">Sostenibilidad</a></li>
+<li><a data-weight="18">Comunicación</a></li>
+<li><a data-weight="18">Ciudadanía</a></li>
+<li><a data-weight="18">Tecnología</a></li>
 
-<li><a data-weight="14">Solidaridad</a></li>
-<li><a data-weight="14">Valores</a></li>
-<li><a data-weight="14">Reflexión</a></li>
-<li><a data-weight="14">Talento</a></li>
+<li><a data-weight="16">Solidaridad</a></li>
+<li><a data-weight="16">Valores</a></li>
+<li><a data-weight="16">Reflexión</a></li>
+<li><a data-weight="16">Talento</a></li>
 
-<li><a data-weight="12">Desarrollo</a></li>
-<li><a data-weight="12">Transformación</a></li>
-<li><a data-weight="12">Descubrimiento</a></li>
-<li><a data-weight="12">Compromiso</a></li>
+<li><a data-weight="14">Desarrollo</a></li>
+<li><a data-weight="14">Transformación</a></li>
+<li><a data-weight="14">Descubrimiento</a></li>
+<li><a data-weight="14">Compromiso</a></li>
+
+<li><a data-weight="12">Liderazgo</a></li>
+<li><a data-weight="12">Cultura</a></li>
+<li><a data-weight="12">Creatividad digital</a></li>
+<li><a data-weight="12">Aprendizaje cooperativo</a></li>
+<li><a data-weight="12">Colaboración</a></li>
+<li><a data-weight="12">Participación activa</a></li>
 
 </ul>
 
@@ -121,7 +128,7 @@ window.onload = function() {
 
     try {
 
-        TagCanvas.Start('myCanvas', 'tags', {
+        TagCanvas.Start('myCanvas','tags',{
 
             textColour:'#066337',
 
@@ -133,29 +140,37 @@ window.onload = function() {
 
             depth:1,
 
-            zoom:1.35,
+            zoom:1.4,
 
-            reverse:true,
+            reverse:false,
 
-            maxSpeed:0.012,
+            maxSpeed:0.04,
 
-            minSpeed:0.002,
+            minSpeed:0,
 
-            initial:[0.03,-0.02],
+            initial:[0,0],
 
-            decel:0.98,
+            decel:0.92,
 
-            dragControl:true,
+            freezeActive:true,
+
+            freezeDecel:true,
+
+            dragControl:false,
+
+            activeCursor:'pointer',
+
+            lock:'xy',
 
             wheelZoom:false,
 
-            noSelect:true,
+            pinchZoom:false,
 
-            freezeActive:false,
+            noSelect:true,
 
             shuffleTags:true,
 
-            textHeight:28,
+            textHeight:30,
 
             weight:true,
 
@@ -163,17 +178,18 @@ window.onload = function() {
 
             weightFrom:'data-weight',
 
-            fadeIn:800,
+            fadeIn:1000,
 
-            stretchX:1.05,
+            stretchX:1.1,
 
-            stretchY:1.05
+            stretchY:1.1
 
         });
 
-    } catch(e) {
+    }
+    catch(e){
 
-        console.error(e);
+        console.log(e);
 
     }
 
