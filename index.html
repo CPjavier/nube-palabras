@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nube 3D</title>
+<title>Nube 3D Educativa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
 
 <style>
 
-body{
+html,body{
     margin:0;
-    background:#ffffff;
+    padding:0;
+    width:100%;
+    height:100%;
     overflow:hidden;
-    font-family: "Montserrat", Arial, sans-serif;
+    background:#ffffff;
+    font-family:'Montserrat',sans-serif;
 }
 
 #myCanvasContainer{
     width:100%;
-    height:650px;
+    height:750px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -27,7 +33,7 @@ body{
 
 #myCanvas{
     width:100%;
-    height:650px;
+    height:750px;
 }
 
 #tags{
@@ -47,63 +53,63 @@ body{
 <body>
 
 <div id="myCanvasContainer">
-    <canvas id="myCanvas" width="1000" height="650">
-        Tu navegador no soporta Canvas.
-    </canvas>
+    <canvas id="myCanvas" width="1000" height="750"></canvas>
 </div>
 
 <div id="tags">
 
 <ul>
 
-<li><a href="#">Aprender</a></li>
-<li><a href="#">Conocimiento</a></li>
-<li><a href="#">Curiosidad</a></li>
-<li><a href="#">Lectura</a></li>
-<li><a href="#">Investigación</a></li>
-<li><a href="#">Creatividad</a></li>
-<li><a href="#">Igualdad</a></li>
-<li><a href="#">Calidad</a></li>
-<li><a href="#">Metodologías activas</a></li>
-<li><a href="#">Cooperación</a></li>
-<li><a href="#">Autonomía</a></li>
-<li><a href="#">Proyectos</a></li>
-<li><a href="#">Motivación</a></li>
-<li><a href="#">Esfuerzo</a></li>
-<li><a href="#">Felicidad</a></li>
-<li><a href="#">Diversidad</a></li>
-<li><a href="#">Convivencia</a></li>
-<li><a href="#">Innovación</a></li>
-<li><a href="#">Arte</a></li>
-<li><a href="#">Pensamiento crítico</a></li>
-<li><a href="#">Trabajo en equipo</a></li>
-<li><a href="#">Aprendizaje activo</a></li>
-<li><a href="#">Competencias</a></li>
-<li><a href="#">Juego</a></li>
+<li><a data-weight="45">Aprender</a></li>
+<li><a data-weight="45">Innovación</a></li>
+<li><a data-weight="42">Creatividad</a></li>
+<li><a data-weight="40">Conocimiento</a></li>
+<li><a data-weight="38">Educación</a></li>
 
-<li><a href="#">Inclusión</a></li>
-<li><a href="#">Respeto</a></li>
-<li><a href="#">Empatía</a></li>
-<li><a href="#">Colaboración</a></li>
-<li><a href="#">Educación</a></li>
-<li><a href="#">Participación</a></li>
-<li><a href="#">Sostenibilidad</a></li>
-<li><a href="#">Tecnología</a></li>
-<li><a href="#">Valores</a></li>
-<li><a href="#">Cultura</a></li>
-<li><a href="#">Comunicación</a></li>
-<li><a href="#">Reflexión</a></li>
-<li><a href="#">Liderazgo</a></li>
-<li><a href="#">Compromiso</a></li>
-<li><a href="#">Solidaridad</a></li>
-<li><a href="#">Equidad</a></li>
-<li><a href="#">Ciudadanía</a></li>
-<li><a href="#">Descubrimiento</a></li>
-<li><a href="#">Talento</a></li>
-<li><a href="#">Desarrollo</a></li>
-<li><a href="#">Transformación</a></li>
-<li><a href="#">Creatividad digital</a></li>
-<li><a href="#">Aprendizaje cooperativo</a></li>
+<li><a data-weight="34">Motivación</a></li>
+<li><a data-weight="34">Diversidad</a></li>
+<li><a data-weight="34">Inclusión</a></li>
+<li><a data-weight="34">Cooperación</a></li>
+
+<li><a data-weight="30">Autonomía</a></li>
+<li><a data-weight="30">Calidad</a></li>
+<li><a data-weight="30">Convivencia</a></li>
+<li><a data-weight="30">Arte</a></li>
+
+<li><a data-weight="26">Pensamiento crítico</a></li>
+<li><a data-weight="26">Aprendizaje activo</a></li>
+<li><a data-weight="26">Trabajo en equipo</a></li>
+<li><a data-weight="26">Competencias</a></li>
+
+<li><a data-weight="22">Juego</a></li>
+<li><a data-weight="22">Lectura</a></li>
+<li><a data-weight="22">Proyectos</a></li>
+<li><a data-weight="22">Curiosidad</a></li>
+
+<li><a data-weight="20">Investigación</a></li>
+<li><a data-weight="20">Esfuerzo</a></li>
+<li><a data-weight="20">Felicidad</a></li>
+<li><a data-weight="20">Igualdad</a></li>
+
+<li><a data-weight="18">Metodologías activas</a></li>
+<li><a data-weight="18">Respeto</a></li>
+<li><a data-weight="18">Empatía</a></li>
+<li><a data-weight="18">Participación</a></li>
+
+<li><a data-weight="16">Sostenibilidad</a></li>
+<li><a data-weight="16">Comunicación</a></li>
+<li><a data-weight="16">Ciudadanía</a></li>
+<li><a data-weight="16">Tecnología</a></li>
+
+<li><a data-weight="14">Solidaridad</a></li>
+<li><a data-weight="14">Valores</a></li>
+<li><a data-weight="14">Reflexión</a></li>
+<li><a data-weight="14">Talento</a></li>
+
+<li><a data-weight="12">Desarrollo</a></li>
+<li><a data-weight="12">Transformación</a></li>
+<li><a data-weight="12">Descubrimiento</a></li>
+<li><a data-weight="12">Compromiso</a></li>
 
 </ul>
 
@@ -117,51 +123,58 @@ window.onload = function() {
 
         TagCanvas.Start('myCanvas', 'tags', {
 
-            textColour: '#066337',
+            textColour:'#066337',
 
-            outlineMethod: 'none',
+            outlineMethod:'none',
 
-            outlineColour: 'transparent',
+            outlineColour:'transparent',
 
-            reverse: true,
+            shape:'sphere',
 
-            depth: 0.95,
+            depth:1,
 
-            maxSpeed: 0.025,
+            zoom:1.35,
 
-            minSpeed: 0.005,
+            reverse:true,
 
-            textHeight: 24,
+            maxSpeed:0.012,
 
-            weight: true,
+            minSpeed:0.002,
 
-            weightMode: 'size',
+            initial:[0.03,-0.02],
 
-            wheelZoom: false,
+            decel:0.98,
 
-            noSelect: true,
+            dragControl:true,
 
-            shuffleTags: true,
+            wheelZoom:false,
 
-            dragControl: true,
+            noSelect:true,
 
-            pinchZoom: false,
+            freezeActive:false,
 
-            freezeActive: false,
+            shuffleTags:true,
 
-            shape: 'sphere',
+            textHeight:28,
 
-            decel: 0.95,
+            weight:true,
 
-            zoom: 1.15,
+            weightMode:'both',
 
-            initial: [0.08, -0.05]
+            weightFrom:'data-weight',
+
+            fadeIn:800,
+
+            stretchX:1.05,
+
+            stretchY:1.05
 
         });
 
-    }
-    catch(e) {
-        console.log(e);
+    } catch(e) {
+
+        console.error(e);
+
     }
 
 };
