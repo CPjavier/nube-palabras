@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nube 3D Educativa</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Nube 3D</title>
 
 <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
 
 <style>
 
-html,body{
+body{
     margin:0;
-    padding:0;
-    width:100%;
-    height:100%;
+    background:white;
     overflow:hidden;
-    background:#ffffff;
-    font-family:'Montserrat',sans-serif;
 }
 
 #myCanvasContainer{
     width:100%;
-    height:750px;
+    height:600px;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-#myCanvas{
+canvas{
     width:100%;
-    height:750px;
+    max-width:900px;
+    height:600px;
 }
 
 #tags{
@@ -43,90 +35,55 @@ html,body{
 #tags a{
     color:#066337;
     text-decoration:none;
-    font-weight:600;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div id="myCanvasContainer">
-    <canvas id="myCanvas" width="1000" height="750"></canvas>
+    <canvas id="myCanvas" width="900" height="600"></canvas>
 </div>
 
 <div id="tags">
-
 <ul>
 
-<li><a data-weight="50">Aprender</a></li>
-<li><a data-weight="48">Innovación</a></li>
-<li><a data-weight="46">Creatividad</a></li>
-<li><a data-weight="44">Conocimiento</a></li>
-<li><a data-weight="42">Educación</a></li>
-
-<li><a data-weight="38">Motivación</a></li>
-<li><a data-weight="38">Inclusión</a></li>
-<li><a data-weight="38">Diversidad</a></li>
-<li><a data-weight="38">Cooperación</a></li>
-
-<li><a data-weight="34">Autonomía</a></li>
-<li><a data-weight="34">Calidad</a></li>
-<li><a data-weight="34">Arte</a></li>
-<li><a data-weight="34">Convivencia</a></li>
-
-<li><a data-weight="30">Pensamiento crítico</a></li>
-<li><a data-weight="30">Aprendizaje activo</a></li>
-<li><a data-weight="30">Trabajo en equipo</a></li>
-<li><a data-weight="30">Competencias</a></li>
-
-<li><a data-weight="26">Juego</a></li>
-<li><a data-weight="26">Lectura</a></li>
-<li><a data-weight="26">Proyectos</a></li>
-<li><a data-weight="26">Curiosidad</a></li>
-
-<li><a data-weight="22">Investigación</a></li>
-<li><a data-weight="22">Esfuerzo</a></li>
-<li><a data-weight="22">Felicidad</a></li>
-<li><a data-weight="22">Igualdad</a></li>
-
-<li><a data-weight="20">Metodologías activas</a></li>
-<li><a data-weight="20">Respeto</a></li>
-<li><a data-weight="20">Empatía</a></li>
-<li><a data-weight="20">Participación</a></li>
-
-<li><a data-weight="18">Sostenibilidad</a></li>
-<li><a data-weight="18">Comunicación</a></li>
-<li><a data-weight="18">Ciudadanía</a></li>
-<li><a data-weight="18">Tecnología</a></li>
-
-<li><a data-weight="16">Solidaridad</a></li>
-<li><a data-weight="16">Valores</a></li>
-<li><a data-weight="16">Reflexión</a></li>
-<li><a data-weight="16">Talento</a></li>
-
-<li><a data-weight="14">Desarrollo</a></li>
-<li><a data-weight="14">Transformación</a></li>
-<li><a data-weight="14">Descubrimiento</a></li>
-<li><a data-weight="14">Compromiso</a></li>
-
-<li><a data-weight="12">Liderazgo</a></li>
-<li><a data-weight="12">Cultura</a></li>
-<li><a data-weight="12">Creatividad digital</a></li>
-<li><a data-weight="12">Aprendizaje cooperativo</a></li>
-<li><a data-weight="12">Colaboración</a></li>
-<li><a data-weight="12">Participación activa</a></li>
+<li><a href="#">Aprender</a></li>
+<li><a href="#">Conocimiento</a></li>
+<li><a href="#">Curiosidad</a></li>
+<li><a href="#">Lectura</a></li>
+<li><a href="#">Investigación</a></li>
+<li><a href="#">Creatividad</a></li>
+<li><a href="#">Igualdad</a></li>
+<li><a href="#">Calidad</a></li>
+<li><a href="#">Metodologías activas</a></li>
+<li><a href="#">Cooperación</a></li>
+<li><a href="#">Autonomía</a></li>
+<li><a href="#">Proyectos</a></li>
+<li><a href="#">Motivación</a></li>
+<li><a href="#">Esfuerzo</a></li>
+<li><a href="#">Felicidad</a></li>
+<li><a href="#">Diversidad</a></li>
+<li><a href="#">Convivencia</a></li>
+<li><a href="#">Innovación</a></li>
+<li><a href="#">Arte</a></li>
+<li><a href="#">Pensamiento crítico</a></li>
+<li><a href="#">Trabajo en equipo</a></li>
+<li><a href="#">Aprendizaje activo</a></li>
+<li><a href="#">Competencias</a></li>
+<li><a href="#">Juego</a></li>
 
 </ul>
-
 </div>
 
 <script>
 
-window.onload = function() {
+window.onload = function(){
 
-    try {
+    try{
 
         TagCanvas.Start('myCanvas','tags',{
 
@@ -134,66 +91,31 @@ window.onload = function() {
 
             outlineMethod:'none',
 
-            outlineColour:'transparent',
+            reverse:true,
 
-            shape:'sphere',
-
-            depth:1,
-
-            zoom:1.4,
-
-            reverse:false,
+            depth:0.9,
 
             maxSpeed:0.04,
 
-            minSpeed:0,
-
-            initial:[0,0],
-
-            decel:0.92,
-
-            freezeActive:true,
-
-            freezeDecel:true,
-
-            dragControl:false,
-
-            activeCursor:'pointer',
-
-            lock:'xy',
+            textHeight:25,
 
             wheelZoom:false,
-
-            pinchZoom:false,
 
             noSelect:true,
 
             shuffleTags:true,
 
-            textHeight:30,
-
-            weight:true,
-
-            weightMode:'both',
-
-            weightFrom:'data-weight',
-
-            fadeIn:1000,
-
-            stretchX:1.1,
-
-            stretchY:1.1
+            shape:'sphere'
 
         });
 
-    }
-    catch(e){
+    }catch(e){
 
         console.log(e);
 
     }
 
-};
+}
 
 </script>
 
