@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nube 3D</title>
 
 <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
@@ -10,22 +12,22 @@
 
 body{
     margin:0;
-    background:white;
+    background:#ffffff;
     overflow:hidden;
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 #myCanvasContainer{
     width:100%;
-    height:600px;
+    height:650px;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-canvas{
+#myCanvas{
     width:100%;
-    max-width:900px;
-    height:600px;
+    height:650px;
 }
 
 #tags{
@@ -35,20 +37,23 @@ canvas{
 #tags a{
     color:#066337;
     text-decoration:none;
-    font-family:Arial,sans-serif;
-    font-weight:bold;
+    font-weight:600;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div id="myCanvasContainer">
-    <canvas id="myCanvas" width="900" height="600"></canvas>
+    <canvas id="myCanvas" width="1000" height="650">
+        Tu navegador no soporta Canvas.
+    </canvas>
 </div>
 
 <div id="tags">
+
 <ul>
 
 <li><a href="#">Aprender</a></li>
@@ -76,46 +81,90 @@ canvas{
 <li><a href="#">Competencias</a></li>
 <li><a href="#">Juego</a></li>
 
+<li><a href="#">Inclusión</a></li>
+<li><a href="#">Respeto</a></li>
+<li><a href="#">Empatía</a></li>
+<li><a href="#">Colaboración</a></li>
+<li><a href="#">Educación</a></li>
+<li><a href="#">Participación</a></li>
+<li><a href="#">Sostenibilidad</a></li>
+<li><a href="#">Tecnología</a></li>
+<li><a href="#">Valores</a></li>
+<li><a href="#">Cultura</a></li>
+<li><a href="#">Comunicación</a></li>
+<li><a href="#">Reflexión</a></li>
+<li><a href="#">Liderazgo</a></li>
+<li><a href="#">Compromiso</a></li>
+<li><a href="#">Solidaridad</a></li>
+<li><a href="#">Equidad</a></li>
+<li><a href="#">Ciudadanía</a></li>
+<li><a href="#">Descubrimiento</a></li>
+<li><a href="#">Talento</a></li>
+<li><a href="#">Desarrollo</a></li>
+<li><a href="#">Transformación</a></li>
+<li><a href="#">Creatividad digital</a></li>
+<li><a href="#">Aprendizaje cooperativo</a></li>
+
 </ul>
+
 </div>
 
 <script>
 
-window.onload = function(){
+window.onload = function() {
 
-    try{
+    try {
 
-        TagCanvas.Start('myCanvas','tags',{
+        TagCanvas.Start('myCanvas', 'tags', {
 
-            textColour:'#066337',
+            textColour: '#066337',
 
-            outlineMethod:'none',
+            outlineMethod: 'none',
 
-            reverse:true,
+            outlineColour: 'transparent',
 
-            depth:0.9,
+            reverse: true,
 
-            maxSpeed:0.04,
+            depth: 0.95,
 
-            textHeight:25,
+            maxSpeed: 0.025,
 
-            wheelZoom:false,
+            minSpeed: 0.005,
 
-            noSelect:true,
+            textHeight: 24,
 
-            shuffleTags:true,
+            weight: true,
 
-            shape:'sphere'
+            weightMode: 'size',
+
+            wheelZoom: false,
+
+            noSelect: true,
+
+            shuffleTags: true,
+
+            dragControl: true,
+
+            pinchZoom: false,
+
+            freezeActive: false,
+
+            shape: 'sphere',
+
+            decel: 0.95,
+
+            zoom: 1.15,
+
+            initial: [0.08, -0.05]
 
         });
 
-    }catch(e){
-
+    }
+    catch(e) {
         console.log(e);
-
     }
 
-}
+};
 
 </script>
 
